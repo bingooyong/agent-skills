@@ -8,19 +8,19 @@ Cursor 会自动加载 **用户级** skills 目录下的所有技能，在所有
 # 确保目录存在
 mkdir -p ~/.cursor/skills
 
-# 从本仓库复制整个 skill 目录
-cp -R .cursor/skills/project-docs-governance ~/.cursor/skills/
+# 从 agent-skills 仓库根目录复制（把路径换成你本机克隆位置）
+cp -R /path/to/agent-skills/project-docs-governance ~/.cursor/skills/
 ```
 
-或从任意路径执行（把下面的路径换成你克隆的本仓库根路径）：
+若你已在包含本 skill 的 monorepo 中，且 skill 位于 `.cursor/skills/project-docs-governance/`，也可：
 
 ```bash
-cp -R /path/to/NBLM2PPTX/.cursor/skills/project-docs-governance ~/.cursor/skills/
+cp -R .cursor/skills/project-docs-governance ~/.cursor/skills/
 ```
 
 ## 方式二：使用项目内 skill（无需安装）
 
-本仓库已包含 `.cursor/skills/project-docs-governance/`，在 **本仓库内** 打开 Cursor 时，该 skill 会作为**项目 skill** 自动可用，无需复制到 `~/.cursor/skills/`。
+将本目录放到 **目标项目** 的 `.cursor/skills/project-docs-governance/` 下，在该项目内打开 Cursor 时，该 skill 作为**项目 skill** 可用，无需复制到 `~/.cursor/skills/`。
 
 ## Cursor 如何发现 Skills
 
