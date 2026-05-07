@@ -12,6 +12,14 @@
 | [memory-governance](skills/memory-governance/) | 管理 agent 记忆文件：分类、去重、验证、治理，防止记忆膨胀和过期 |
 | [hooks-designer](skills/hooks-designer/) | 设计 agent hooks：触发时机、执行动作、失败策略、回退方案 |
 | [project-docs-governance](project-docs-governance/) | 企业级项目文档治理：规划、生成、补全与维护完整文档体系 |
+| [code-review-checklist](skills/code-review-checklist/) | 生成结构化 code review 检查清单，按语言/框架/变更类型定制 |
+| [error-pattern-library](skills/error-pattern-library/) | 积累常见错误模式和解决方案，支持按错误特征检索 |
+| [api-design-reviewer](skills/api-design-reviewer/) | 审查 API 设计的一致性、向后兼容、安全性和可扩展性 |
+| [refactoring-planner](skills/refactoring-planner/) | 分析代码坏味道，生成重构计划，评估影响范围和风险 |
+| [dependency-analyzer](skills/dependency-analyzer/) | 分析依赖关系图谱，识别循环依赖、过时依赖、安全风险 |
+| [test-strategy-designer](skills/test-strategy-designer/) | 根据代码变更分析测试影响面，设计测试策略 |
+| [commit-message-craftsman](skills/commit-message-craftsman/) | 基于变更内容生成规范的 commit message |
+| [onboarding-guide-generator](skills/onboarding-guide-generator/) | 从项目结构和配置自动生成新成员上手指南 |
 
 ## 安装
 
@@ -75,6 +83,15 @@ knowledge-consolidation（知识沉淀）
   └→ project-doc-generator（写入项目文档）
 
 hooks-designer（设计 hooks）← 可与所有技能配合
+
+code-quality 生态（代码质量相关技能互相配合）:
+code-review-checklist ← 输入给 → api-design-reviewer, refactoring-planner
+error-pattern-library ← 输入给 → code-review-checklist, dependency-analyzer, refactoring-planner
+test-strategy-designer ← 输入给 → refactoring-planner, api-design-reviewer
+
+refactoring-planner ← 依赖 → dependency-analyzer（耦合分析驱动重构）
+commit-message-craftsman（独立，与 code-review-checklist 轻度关联）
+onboarding-guide-generator ← 引用 → dependency-analyzer, project-doc-generator
 ```
 
 ## 目录结构
@@ -94,6 +111,22 @@ agent-skills/
 │   ├── memory-governance/
 │   │   └── SKILL.md
 │   └── hooks-designer/
+│       └── SKILL.md
+│   ├── code-review-checklist/
+│   │   └── SKILL.md
+│   ├── error-pattern-library/
+│   │   └── SKILL.md
+│   ├── api-design-reviewer/
+│   │   └── SKILL.md
+│   ├── refactoring-planner/
+│   │   └── SKILL.md
+│   ├── dependency-analyzer/
+│   │   └── SKILL.md
+│   ├── test-strategy-designer/
+│   │   └── SKILL.md
+│   ├── commit-message-craftsman/
+│   │   └── SKILL.md
+│   └── onboarding-guide-generator/
 │       └── SKILL.md
 ├── project-docs-governance/         # 独立 skill（含完整 references/templates）
 │   └── SKILL.md

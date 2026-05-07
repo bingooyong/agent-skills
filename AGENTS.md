@@ -122,3 +122,11 @@ description 要求：
 | memory-governance | 只管理 memory 文件，不做知识沉淀判断或 AGENTS.md 管理 |
 | hooks-designer | 只设计 hooks 配置和策略，不做运行时实现 |
 | project-docs-governance | 企业级文档治理，包含完整 references 和 templates |
+| code-review-checklist | 只生成 review 检查清单，不做实际代码 review 或自动化检查 |
+| error-pattern-library | 只积累和检索错误模式，不做实时监控或自动修复 |
+| api-design-reviewer | 只审查 API 设计，不做 API 文档生成或代码 review |
+| refactoring-planner | 只生成重构计划，不做实际代码修改或代码 review |
+| dependency-analyzer | 只分析依赖关系，不做自动升级或安全 exploit 分析 |
+| test-strategy-designer | 只设计测试策略，不做具体测试用例编写或测试执行 |
+| commit-message-craftsman | 只生成 commit message，不做自动提交或 changelog 生成 |
+| onboarding-guide-generator | 只生成上手指南，不做项目文档体系或架构文档 |
