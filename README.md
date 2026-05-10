@@ -20,6 +20,7 @@
 | [test-strategy-designer](skills/test-strategy-designer/) | 根据代码变更分析测试影响面，设计测试策略 |
 | [commit-message-craftsman](skills/commit-message-craftsman/) | 基于变更内容生成规范的 commit message |
 | [onboarding-guide-generator](skills/onboarding-guide-generator/) | 从项目结构和配置自动生成新成员上手指南 |
+| [knowledge-card-generator](skills/knowledge-card-generator/) | 将 Markdown 知识库转为结构化 JSON + YAML LLM Wiki 卡片集，供 AI 直接消费 |
 
 ## 安装
 
@@ -92,6 +93,9 @@ test-strategy-designer ← 输入给 → refactoring-planner, api-design-reviewe
 refactoring-planner ← 依赖 → dependency-analyzer（耦合分析驱动重构）
 commit-message-craftsman（独立，与 code-review-checklist 轻度关联）
 onboarding-guide-generator ← 引用 → dependency-analyzer, project-doc-generator
+
+knowledge-card-generator（知识卡片生成）← 输入自 → project-doc-generator, knowledge-consolidation
+  将知识库 Markdown 转为 AI 可消费的卡片集，knowledge-consolidation 判断值得沉淀的内容后可触发卡片生成
 ```
 
 ## 目录结构
@@ -127,6 +131,8 @@ agent-skills/
 │   ├── commit-message-craftsman/
 │   │   └── SKILL.md
 │   └── onboarding-guide-generator/
+│       └── SKILL.md
+│   ├── knowledge-card-generator/
 │       └── SKILL.md
 ├── project-docs-governance/         # 独立 skill（含完整 references/templates）
 │   └── SKILL.md

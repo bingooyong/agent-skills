@@ -130,3 +130,4 @@ description 要求：
 | test-strategy-designer | 只设计测试策略，不做具体测试用例编写或测试执行 |
 | commit-message-craftsman | 只生成 commit message，不做自动提交或 changelog 生成 |
 | onboarding-guide-generator | 只生成上手指南，不做项目文档体系或架构文档 |
+| knowledge-card-generator | 只将 Markdown 转为结构化 JSON/YAML 卡片，不做向量索引、图谱存储或版本管理 |
