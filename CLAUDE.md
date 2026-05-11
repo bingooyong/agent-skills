@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 仓库结构
 
-- `skills/` — 14 个标准 skill，每个目录下必需 `SKILL.md`
+- `skills/` — 15 个标准 skill，每个目录下必需 `SKILL.md`
 - `project-docs-governance/` — 独立的企业级文档治理 skill（含 references/ 和 templates/）
 - `templates/skill-template.md` — 新建 skill 的模板
 - `AGENTS.md` — 仓库级 skill 治理规范（必须遵守）

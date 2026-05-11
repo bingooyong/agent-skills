@@ -131,3 +131,4 @@ description 要求：
 | commit-message-craftsman | 只生成 commit message，不做自动提交或 changelog 生成 |
 | onboarding-guide-generator | 只生成上手指南，不做项目文档体系或架构文档 |
 | knowledge-card-generator | 只将 Markdown 转为结构化 JSON/YAML 卡片，不做向量索引、图谱存储或版本管理 |
+| knowledge-card-splitter | 只拆分 JSON 卡片集为小文件，不做卡片生成、内容修改或上下文选择策略 |

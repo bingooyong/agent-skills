@@ -21,6 +21,7 @@
 | [commit-message-craftsman](skills/commit-message-craftsman/) | 基于变更内容生成规范的 commit message |
 | [onboarding-guide-generator](skills/onboarding-guide-generator/) | 从项目结构和配置自动生成新成员上手指南 |
 | [knowledge-card-generator](skills/knowledge-card-generator/) | 将 Markdown 知识库转为结构化 JSON + YAML LLM Wiki 卡片集，供 AI 直接消费 |
+| [knowledge-card-splitter](skills/knowledge-card-splitter/) | 将大型 JSON 卡片集按模块/功能/类型拆分为小文件，支持 AI 按任务加载上下文 |
 
 ## 安装
 
@@ -96,6 +97,9 @@ onboarding-guide-generator ← 引用 → dependency-analyzer, project-doc-gener
 
 knowledge-card-generator（知识卡片生成）← 输入自 → project-doc-generator, knowledge-consolidation
   将知识库 Markdown 转为 AI 可消费的卡片集，knowledge-consolidation 判断值得沉淀的内容后可触发卡片生成
+
+knowledge-card-splitter（知识卡片拆分）← 输入自 → knowledge-card-generator
+  将 cards.json 按模块/功能/类型拆分为小文件，AI 按任务按需加载，不重复加载整份卡片集
 ```
 
 ## 目录结构
@@ -133,6 +137,8 @@ agent-skills/
 │   └── onboarding-guide-generator/
 │       └── SKILL.md
 │   ├── knowledge-card-generator/
+│   │   └── SKILL.md
+│   └── knowledge-card-splitter/
 │       └── SKILL.md
 ├── project-docs-governance/         # 独立 skill（含完整 references/templates）
 │   └── SKILL.md
